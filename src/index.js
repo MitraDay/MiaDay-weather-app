@@ -68,6 +68,22 @@ function displayPosition(position) {
   axios.get(url).then(displayWeather);
 }
 
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp");
+  celsiusLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
 let currentButton = document.querySelector("#current-input");
 currentButton.addEventListener("click", current);
 
@@ -76,8 +92,8 @@ function displayWeather(response) {
   console.log(temperature);
   let temperatureElement = document.querySelector("h1");
   temperatureElement.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
-  let temp = document.querySelector("h3");
-  temp.innerHTML = `${temperature}°C`;
+  let temp = document.querySelector("#temp");
+  temp.innerHTML = Math.round(response.data.main.temp);
   document.querySelector(
     "#wind"
   ).innerHTML = `Wind: ${response.data.wind.speed}`;
@@ -87,3 +103,11 @@ function displayWeather(response) {
     "#humidity"
   ).innerHTML = `Humidity: ${response.data.main.humidity}`;
 }
+
+let fahrenheitLink = documnet.querySelector("fahrenheitLink");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = documnet.querySelector("celsiusLink");
+fahrenheitLink.addEventListener("click", displayCelsiusTemperature);
+
+search("Lisbon");
