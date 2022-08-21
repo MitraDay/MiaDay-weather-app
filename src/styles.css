@@ -9,6 +9,8 @@ body {
 
 .card-block {
   display: block;
+  max-width: 1000px;
+  margin: 0 auto;
   background: linear-gradient(
     135deg,
     rgb(247, 250, 95) 20%,
