@@ -89,19 +89,30 @@ currentButton.addEventListener("click", current);
 
 function displayWeather(response) {
   let temperature = Math.round(response.data.main.temp);
+
   console.log(temperature);
   let temperatureElement = document.querySelector("h1");
   temperatureElement.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
+
   let temp = document.querySelector("#temp");
   temp.innerHTML = Math.round(response.data.main.temp);
+
   document.querySelector(
     "#wind"
-  ).innerHTML = `Wind: ${response.data.wind.speed}`;
+  ).innerHTML = `Wind: ${response.data.wind.speed} km/h`;
+
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+
   document.querySelector(
     "#humidity"
   ).innerHTML = `Humidity: ${response.data.main.humidity}`;
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweather.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 let fahrenheitLink = documnet.querySelector("fahrenheitLink");

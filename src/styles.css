@@ -9,7 +9,11 @@ body {
 
 .card-block {
   display: block;
-  background-color: aquamarine;
+  background: linear-gradient(
+    135deg,
+    rgb(247, 250, 95) 20%,
+    rgb(255, 168, 168) 100%
+  );
   border: 10px;
   border-radius: 30px;
   box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
@@ -113,9 +117,4 @@ card {
 img {
   display: inline-block;
   margin-left: 30px;
-}
-
-h4 {
-  text-align: center;
-  display: block;
 }

@@ -12,7 +12,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <script src="https://kit.fontawesome.com/a906676a32.js" crossorigin="anonymous"></script>  </head>
+       <script src="https://kit.fontawesome.com/a906676a32.js" crossorigin="anonymous"></script>  </head>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <body>
     <div class="container">
@@ -35,7 +35,7 @@
                 type="submit"
                 value="Search"
                 id="search-input"
-                class="form-control btn btn-primary shadow-sm w-70"
+                class="form-control btn btn-primary shadow-sm w-70px"
               />
             </div>
             <div class="col-3">
@@ -51,40 +51,43 @@
         </div>
       
       <br />
-      <div class="row">
-        <div class="col-6">
-      <div class="weather-app">
-          <h1>Bushehr</h1>
+      <div class="card-block">
+        <div class="card-body" style="height: 5rem;">
+          <h1 id="city"></h1>
           <h2>Mon, Jul 4</h2>
           <p>
-          <div class="text-center">
-          <h3><span id="temp"> 40° </span>
-             <span class="cDegree" id="celsiusLink">
-              <a href=""></a>C</a></span>|<span class="fDegree" id="fahrenheitLink"><a href=""></a>F</a></span></h3>
+            <img
+            src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+            alt="sunny"
+            id="icon"
+            class="float-left"
+          <div class="float-left">
+          <h3><span id="temp"> 40° </span> <span class="cDegree"><a href="";/>C</a></span>|<span class="fDegree"><a href="";/>F</a></span></h3>
           </div>
-          <p id="description">Fair</p>
           </p>
           </div>
-          </div>
-      </div>
          
 
           <br />
-          <div class="col-6">
+          
           <ul class="interdouc">
+            Precipitation: 0%
             <br />
             <span id="humidity"> Humidity: 57% </span>
             <br />
            <span id="wind"> Wind: 10 km/h </span>
           </ul>
-          <ul class="info">
+          <ul class="info" id="description">
+            Fair
+            <br />
             36°/31°
             <br />
             Feels like 38°
           </ul>
-          </div>
-      <div>
-      <br />
+          
+        </div>
+      </div>
+
       <ul>
       <div class="row">
         <div class="col-sm">
