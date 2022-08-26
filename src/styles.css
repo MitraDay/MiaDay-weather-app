@@ -1,122 +1,84 @@
 body {
-  background: radial-gradient(
-    circle at 0% 0.5%,
-    rgb(241, 241, 242) 0.1%,
-    rgb(224, 226, 228) 100.2%
-  );
+  color: #878787;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 }
 
-.card-block {
-  display: block;
-  max-width: 1000px;
+.search-city {
+  text-align: center;
   margin: 0 auto;
-  background: linear-gradient(
-    135deg,
-    rgb(247, 250, 95) 20%,
-    rgb(255, 168, 168) 100%
+  display: block;
+  max-width: 50%px;
+}
+
+.weather-app-wrapper {
+  display: block;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 10px;
+  background: radial-gradient(
+    621px at 25.3% 13.8%,
+    rgb(255, 255, 255) 0%,
+    rgb(234, 236, 255) 90%
   );
-  border: 10px;
-  border-radius: 30px;
-  box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
 }
 
-h1,
-h2 {
-  color: #fff;
+h1 {
+  font-size: 30px;
+  font-weight: 700px;
+  line-height: 28px;
+  margin-bottom: 0;
 }
 
-.interdouc {
-  color: #fff;
-  text-align: right;
-  font-weight: bold;
-  padding: 20px;
-  margin-top: -80px;
+#temperature {
+  font-size: 50px;
+  line-height: 28px;
 }
 
-.info {
-  color: #fff;
-  font-weight: bold;
-  text-align: right;
-  padding: 20px;
+.units {
+  display: block;
+  font-size: 18px;
+  margin: auto 60px;
+  line-height: 30px;
 }
 
-h3 {
-  font-weight: 500;
-  font-size: 60px;
-  color: #fff;
-  margin-top: -30px;
-}
-
-.cDegree {
-  position: relative;
-  top: -22px;
-  font-size: 28px;
-  line-height: 1;
-}
-
-.fDegree {
-  position: relative;
-  top: -22px;
-  font-size: 28px;
-  line-height: 1;
-}
-
-.button-group {
-  bottom: 0;
+#icon {
+  display: block;
+  margin: 10px auto 0 20px;
+  max-width: 40%;
 }
 
 ul {
-  color: #f1f1f1;
+  margin: 0;
+  padding: 0;
 }
 
-.card-title {
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li::first-letter {
+  text-transform: capitalize;
+}
+
+.descrip {
+  text-align: right;
+  margin: 50px;
+}
+
+.weather-temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
+}
+
+h2 {
   text-align: center;
-}
-
-.card-text {
-  font-size: 25px;
-  text-align: center;
-  padding-top: 15px;
-  font-weight: bold;
-}
-
-card {
-  border-radius: 25px;
-}
-
-.card-title {
-  padding-top: 20px;
-  font-weight: bold;
-}
-.card-body-s {
-  margin-left: 10px;
-  padding: 1rem;
-  height: 2rem;
-  border-radius: 25px;
-  background: rgb(226, 226, 101);
-  box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
-  transition: all 200ms ease-in-out;
-}
-
-.card-body-s:hover {
-  background: rgb(248, 173, 90);
-}
-.lil-sun {
-  display: inline-block;
-  padding-left: 75px;
-  font-size: 25px;
-  color: #f1f1f1;
-}
-
-.fa-moon {
-  display: inline-block;
-  padding-right: px;
-  font-size: 25px;
-  color: #f1f1f1;
-}
-
-img {
-  display: inline-block;
-  margin-left: 30px;
+  font-size: 15px;
+  color: black;
+  line-height: 28px;
 }
