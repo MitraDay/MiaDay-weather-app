@@ -44,12 +44,6 @@ h1 {
   line-height: 30px;
 }
 
-#icon {
-  display: block;
-  margin: 10px auto 0 20px;
-  max-width: 40%;
-}
-
 ul {
   margin: 0;
   padding: 0;
@@ -70,15 +64,43 @@ li::first-letter {
   margin: 50px;
 }
 
+.weather-temperature img {
+  display: block;
+  margin: 10px auto 5px 20px;
+  height: 64px;
+  width: 64px;
+}
+.weather-temperature strong {
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 600;
+}
 .weather-temperature .units {
   position: relative;
-  font-size: 16px;
+  font-size: 18px;
   top: -34px;
 }
 
+#celsius-link {
+  text-decoration: none;
+}
+
+#fahrenheit-link {
+  text-decoration: none;
+}
+
+.weather-temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+  text-decoration: none;
+}
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+
 h2 {
-  padding: 0;
   text-align: center;
-  font-size: 10px;
-  color: black;
+  font-size: 4px;
+  color: rgb(33, 33, 33);
 }
