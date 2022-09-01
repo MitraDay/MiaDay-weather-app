@@ -4,11 +4,16 @@ body {
   background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 }
 
-.search-city {
-  text-align: center;
+#theRow {
+  display: flex;
+  align-self: center;
+  width: 145%;
+}
+
+#search-form {
   margin: 0 auto;
   display: block;
-  max-width: 50%px;
+  padding-right: 10px;
 }
 
 .weather-app-wrapper {
